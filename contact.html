@@ -118,22 +118,6 @@
       const html = document.documentElement;
       const saved = localStorage.getItem('theme');
 
-      if (saved === 'dark') {
-        html.classList.add('dark');
-        if (toggleBtn) toggleBtn.textContent = '☀️';
-      } else if (saved === 'light') {
-        html.classList.remove('dark');
-        if (toggleBtn) toggleBtn.textContent = '🌙';
-      } else {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          html.classList.add('dark');
-          if (toggleBtn) toggleBtn.textContent = '☀️';
-        } else {
-          html.classList.remove('dark');
-          if (toggleBtn) toggleBtn.textContent = '🌙';
-        }
-      }
-
       if (!toggleBtn) return;
       toggleBtn.addEventListener('click', () => {
         const isDark = html.classList.toggle('dark');
