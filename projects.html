@@ -135,7 +135,7 @@
         html.classList.remove('dark');
         if (toggleBtn) toggleBtn.textContent = '🌙';
       } else {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
           html.classList.add('dark');
           if (toggleBtn) toggleBtn.textContent = '☀️';
         } else {
